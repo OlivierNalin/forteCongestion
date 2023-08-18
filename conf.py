@@ -17,6 +17,7 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 html_theme = 'furo'
 html_static_path = ['_static']
+html_favicon = "https://storage.googleapis.com/idf-congestion/favicon.ico"
 html_show_copyright = False
 html_show_sphinx = False
 html_theme_options = {
