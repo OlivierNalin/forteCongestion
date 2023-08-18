@@ -23,12 +23,9 @@ Vitesse = Débit / (2 x TO)
 
 Le coeficient 2 permettant de passer du TO à la concentration n'est sans doute pas juste mais donne une ordre de grandeur. 
 
-A ce stade, il ne s'agit que d'illustrer la richesse des données disponibles.
+A ce stade, il ne s'agit que d'illustrer la richesse des données disponibles. Les stations sont identifiées par l'axe (A1,A13,N118 ...), par le sens (W,Y,E,I) et par le point de repère kilométrique (05+02 signifie : 200 mètre après le 5 ème PR). Le lecteur est inviter à visualiser les stations sélectionnées par la liste ci-dessous. 
 
 .. raw:: html
     :file: ./_static/forteCong.html
 
-
-.. raw:: html
-    <iframe src="./_static/forteCong.html" height="500px" width="100%"></iframe>
 
