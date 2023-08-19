@@ -10,7 +10,7 @@ On peut représenter ces segments sur un même graphique (2 voies : rouge, 3 voi
 
 Le tableau ci-dessous indique les moyennes et les écarts types des valeurs de la droite de régression pour le taux d’occupation 45%.
 
-.. list-table:: Débit par voie pour TO = 45%
+.. list-table:: Débit 6mn par voie pour TO = 45%
    :widths: 25 25 25 25
    :header-rows: 1
 
@@ -30,18 +30,6 @@ Le tableau ci-dessous indique les moyennes et les écarts types des valeurs de l
      - 8
      - 68.3 	
      - 16.1
-
-
-+-------+---------+-------+-----+
-|Nbr de |Nbr de   |Moyenne|Ecart|
-| Voies |Stations |       |type |
-+-------+---------+-------+-----+
-|2	    |17       |	66.3  |	10.3|
-+-------+---------+-------+-----+
-|3      |	19	    |63.9   |	13.0|
-+-------+---------+-------+-----+
-|4	    |8      	|68.3 	|16.1 |
-+-------+---------+-------+-----+
 
 
 
