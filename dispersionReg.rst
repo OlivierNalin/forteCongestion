@@ -12,7 +12,7 @@ On peut représenter ces segments sur un même graphique (2 voies : rouge, 3 voi
 
 
 .. raw:: html
-   :file: ./_static/forteCong.html
+   :file: ./_static/dispReg.html
 
 
 
