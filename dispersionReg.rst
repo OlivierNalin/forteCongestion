@@ -8,11 +8,6 @@ On peut représenter ces segments sur un même graphique (2 voies : rouge, 3 voi
 .. image:: https://storage.googleapis.com/dirif-nalin/dispReg.png
     :alt: my-picture1
 
-.. image:: https://storage.googleapis.com/dirif-nalin/dispReg.png
-  :width: 800
-  :alt: Alternative text
-
-
 Le tableau ci-dessous indique les moyennes et les écarts types des valeurs de la droite de régression pour le taux d’occupation 45%.
 
 .. list-table:: Débit 6mn par voie pour TO = 45%
