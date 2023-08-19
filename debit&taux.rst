@@ -30,3 +30,6 @@ Les stations sont identifiées par l'axe (A1,A13,N118 ...), par le sens (W,Y,E,I
    :file: ./_static/forteCong.html
 
 
+.. raw:: html
+   :file: https://storage.googleapis.com/dirif-nalin/dispSeg.html
+
