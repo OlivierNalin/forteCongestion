@@ -5,8 +5,10 @@ calculés sur les données dont les taux sont compris entre 35 et 55%.
 
 On peut représenter ces segments sur un même graphique (2 voies : rouge, 3 voies : vert, 4 voies : bleu).
 
+
 .. raw:: html
    :file: ./_static/dispReg.html
+
 
 Le tableau ci-dessous indique les moyennes et les écarts types des valeurs de la droite de régression pour le taux d’occupation 45%.
 
