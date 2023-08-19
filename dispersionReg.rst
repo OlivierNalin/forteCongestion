@@ -3,7 +3,7 @@ Dispersion des segments de régression
 On constate, d'une station à l'autre, une certaine variation des segments de régression 
 calculés sur les données dont les taux sont compris entre 35 et 55%.
 
-On peut représenter ces segments sur un même graphique (2 voies : rouge, 3 voies : vert, 4 voies : bleu).
+On peut représenter ces segments sur un même graphique (2 voies : rouge, 3 voies : vert, 4 voies : bleu).  
 
 
 .. raw:: html
