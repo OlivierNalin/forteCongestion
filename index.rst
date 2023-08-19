@@ -6,7 +6,7 @@ Régime de forte congestion
    :maxdepth: 3
 
    debit&taux
-   gtc
+   dispersionReg
 
 
 La théorie du trafic routier étudie les relations entre débit, vitesse et concentration. Pour les applications ordinaires, elle propose le modèle du diagramme fondamental (DF) "triangulaire". Ce schéma représente la relation entre la concentation et le débit selon deux droites correspondant aux régimes fluide et congestionné.
