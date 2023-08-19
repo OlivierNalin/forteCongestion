@@ -1,0 +1,11 @@
+Dispersion des segments de régression 
+=========================================  
+On constate que d'une station à l'autre, la variation des segments de régression est importante.
+
+On peut les représenter sur un même graphique (2 voies : rouge, 3 voies : vert, 4 voies : bleu).
+
+  .. raw:: html
+    :file: ./_static/forteCong.html
+
+Le tableau ci-dessous indique les moyennes et les écarts types des valeurs de la droite de régression pour le taux d’occupation 45%.
+  
