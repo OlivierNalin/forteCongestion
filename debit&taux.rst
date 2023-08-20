@@ -1,8 +1,6 @@
-.. toctree::
-   :maxdepth: 2
+.. toctree:
 
-   SelectionStations
-   qualité
+   qualite
 
 
 Données de débit et de taux d'occupation
