@@ -1,11 +1,12 @@
+Données de débit et de taux d'occupation
+=========================================  
+
 .. toctree::
 
    SelectionStations
    qualite
 
 
-Données de débit et de taux d'occupation
-=========================================  
 Stations de comptage
 ---------------------
 La DiRIF a l'objectif de maintenir en état de marche 800 stations de comptage sur son réseau. L'obsolescence et les aléas de l'exploitation font qu'aujourd'hui seulement la moitié environ de ces stations sont opérationnelles. Néanmoins, des investissement en cours permetront d'améliorer leur disponibilité.
