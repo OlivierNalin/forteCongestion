@@ -37,6 +37,7 @@ Les stations sont identifiées par l'axe (A1,A13,N118 ...), par le sens (W,Y,E,I
 
 .. raw:: html
    :file: ./_static/forteCong.html
+   :align: center
 
 
 .. raw:: html
