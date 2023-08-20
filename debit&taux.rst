@@ -2,18 +2,20 @@ Données de débit et de taux d'occupation
 =========================================  
 Stations de comptage
 ---------------------
-La DiRIF a l'objectif de maintenir en état de marche 800 stations de comptage sur son réseau. L'obsolescence et les aléas de l'exploitation font qu'à un moment donné seulement la moitié environ de ces stations sont opérationnelles. 
+La DiRIF a l'objectif de maintenir en état de marche 800 stations de comptage sur son réseau. L'obsolescence et les aléas de l'exploitation font qu'aujourd'hui seulement la moitié environ de ces stations sont opérationnelles. Néanmoins, des investissement en cours permetront d'améliorer leur disponibilité.
 
 Données produites
 -----------------
 Les stations remontent des données de débit et de taux d’occupation sur des périodes de 6mn, soit 2 x 240 données par jour qui sont archivées durablement. Les 5 dernières années sont disponibles *en ligne*. Un historique de 15 ans est disponible en archivage.
 
 Les débits 6mn varient entre 0 et 250 par voie. Les taux d’occupation sont des valeurs entières de pourcentage
-qui ne dépasse jamais 60% quand la chaine de recueil fonctionne correctement.
+qui ne dépassent jamais 60% quand la chaine de recueil fonctionne correctement.
+
+Les données, quand elles sont présentes ne sont pas toujours fiables et il est indispensable de contrôler la qualité des données utilisées. Une perturbation fréquente est la perte intermitante de l'information sur l'une des voies. Elle n'est pas toujours facile à détecter. Cela signifie qu'il faut, pour certaines exploitations, faire un contrôle de chaque station et de chaque période utilisée.
 
 Stations congestionnés 
 ---------------------------
-Pour ce projet on a sélectionné 50 stations qui font apparaître de manière récurrente des régimes de fortes congestions, c'est -à -dire des taux d’occupation supérieurs à 40%.  
+Pour ce projet on a sélectionné des stations qui font apparaître de manière récurrente des régimes de fortes congestions, c'est -à -dire des taux d’occupation supérieurs à 40%.  
 
 Pour chaque station, on a tracé le graphique représentant les couples (débit par voie, TO) mesurés sur des périodes de 6mn. 
 
