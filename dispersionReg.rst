@@ -1,5 +1,14 @@
 Dispersion des segments de régression 
 =========================================  
+
+.. toctree::
+
+   /SelectionStations
+   /qualite
+
+
+
+
 On constate, d'une station à l'autre, une certaine variation des segments de régression 
 calculés sur les données dont les taux sont compris entre 35 et 55%.
 
