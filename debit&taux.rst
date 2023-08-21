@@ -3,6 +3,7 @@ Données de débit et de taux d'occupation
 
 .. toctree::
    :hidden:
+
    SelectionStations
    qualite
 
@@ -21,7 +22,7 @@ qui ne dépassent jamais 60% quand la chaine de recueil fonctionne correctement.
 
 Stations congestionnés 
 ---------------------------
-Pour ce projet on a sélectionné des stations qui font apparaître de manière récurrente des régimes de fortes congestions, c'est -à -dire des taux d’occupation supérieurs à 40%. 
+:doc:`Pour ce projet on a sélectionné des stations qui font apparaître de manière récurrente des régimes de fortes congestions, c'est-à-dire des taux d’occupation supérieurs à 40%.<SelectionStations>` 
 
 Pour chaque station, on a tracé le graphique représentant les couples (débit par voie, TO) mesurés sur des périodes de 6mn. 
 
