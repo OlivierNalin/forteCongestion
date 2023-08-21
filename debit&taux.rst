@@ -2,7 +2,7 @@ Données de débit et de taux d'occupation
 =========================================  
 
 .. toctree::
-
+   :hidden:
    SelectionStations
    qualite
 
@@ -19,10 +19,9 @@ Les débits 6mn varient entre 0 et 250 par voie. Les taux d’occupation sont de
 qui ne dépassent jamais 60% quand la chaine de recueil fonctionne correctement.
 
 
-
 Stations congestionnés 
 ---------------------------
-Pour ce projet on a sélectionné des stations qui font apparaître de manière récurrente des régimes de fortes congestions, c'est -à -dire des taux d’occupation supérieurs à 40%.  
+Pour ce projet on a sélectionné des stations qui font apparaître de manière récurrente des régimes de fortes congestions, c'est -à -dire des taux d’occupation supérieurs à 40%. 
 
 Pour chaque station, on a tracé le graphique représentant les couples (débit par voie, TO) mesurés sur des périodes de 6mn. 
 
@@ -39,11 +38,8 @@ Les stations sont identifiées par l'axe (A1,A13,N118 ...), par le sens (W,Y,E,I
    :file: ./_static/forteCong.html
    :align: center
 
-
-.. raw:: html
-   :file: https://storage.googleapis.com/dirif-nalin/dispSeg.html
-
-
-:doc:`Qualité des données  <qualite>`
---------------------------------------
+Qualité des données 
+------------------- 
 Les données, quand elles sont présentes ne sont pas toujours fiables et il est indispensable de contrôler la qualité des données utilisées. Une perturbation fréquente est la perte intermitante de l'information sur l'une des voies. Elle n'est pas toujours facile à détecter. Cela signifie qu'il faut, pour certaines exploitations, faire un contrôle de chaque station et de chaque période utilisée.
+
+:doc:`Plus sur le sijet <qualite>`
