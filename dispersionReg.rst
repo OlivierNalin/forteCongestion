@@ -2,11 +2,7 @@ Dispersion des segments de régression
 =========================================  
 
 .. toctree::
-
-   /SelectionStations
-   /qualite
-
-
+   :hidden: 
 
 
 On constate, d'une station à l'autre, une certaine variation des segments de régression 
