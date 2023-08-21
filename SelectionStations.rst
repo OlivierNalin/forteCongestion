@@ -1,9 +1,12 @@
 Sélection des stations pertinentes
 ==================================
+La station doit *voir* de la congestion
+----------------------------------------
 La première condition que doit remplir une station pour entrer dans l'analyse est de se trouver sur une section du réseau qui est le lieu d'une forte congestion et ce, de manière récurrente. La fréquence peut être faible, une section congesionnée pendant une heure, dix fois par an, peut apporter des informations utiles et enrichir le pannel des sites considérés.
 
 Le choix qui a été fait, pour ce premier tamis, a été, dans un premier temps, d'identifier les couples de stations et jours (années 2019,2021,2022) pour lesquels le TO avait dépassé 40% pendant 5 périodes de 6mn. Ensuite, on a sélectionné les stations pour lesquelles au moins 60 jours avaient été identifiés à l'étape précédente, sur les 3 années considérées. 250 stations ont ainsi été qualifiées.
-
+La station doit être en *section courante*
+------------------------------------------
 La seconde condition que doit remplir une station pour êter retenue est de se trouver sur une *section courante* ce qui élimine les bretelles et les sections qui précèdent les divergences avec des voies affectées ou les sorties qui occasionnent des remontés de congestion sur la voie de droite. En effet, quand les voies sont affectées à des destinations différentes, le régime peut être fluide sur une voie et congestionnée sur l'autre. Quelques stations situées juste après une réduction du nombre de voies ont été éliminées car on a constaté qu'elle connaissaient les effets de la transition et ne se comportent pas comme une section courante du point de vue de la relation débit vitesse. 
 
 Les bretelles de liaisons et les entrées sorties sont identifiables par la nomenclature des sections du réseau SIRIUS et leur élimination peut donc se faire automatiquement. Plus du tiers des stations sélectionnées à l'étape précédente ont ainsi été éliminées.
