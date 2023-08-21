@@ -11,12 +11,18 @@ Régime de forte congestion
 
 La théorie du trafic routier étudie les relations entre le débit, la vitesse et la concentration. Pour les applications ordinaires, elle propose le modèle du diagramme fondamental (DF) "triangulaire". Ce schéma représente la relation entre la concentation et le débit, selon deux droites correspondant aux régimes fluide et congestionné.
 
+Les situations de forte congestion sont peu étudiées
+.....................................................
 Les exemples considérés concernent principalement des situations voisines du *point critique*, pour lesquelles le débit est relativement proche de la capacité. Les données utilisées en illustration ne comportent parfois pas de points pour les vitesses très faibles. Le comportement du trafic lorsque la vitesse est inférieure à 30 km/h et que le débit est fortement réduit est peu étudié. 
 
 Les représentations du DF que nous avons trouvées dans la littérature font fugurer le régime congestionné jusqu'à la concentration maximale, point où le débit tombe à zéro. Cependant, les données utilisées pour estimer les paramètres de la droite représantant le régime congestionné sont éloignées de l'extrémité du DF. Les valeurs de la concentration qui apparaissent dans les documents consultés sont toujours inférieures à 50 veh/km/voie et les valeurs des vitesses supérieures à 30 km/h.
 
-On a pu considérer que les relations débit vitesse en régime très congestionné ne présentaient pas d'intérêt pratique. En effet, pour rendre compte d'un bouchon, les variables qu'il est utile de prendre en compte sont la capacité de la section aval qui est à l'origine de la congestion et le stock de véhicules à écouler. Cependant, avec l'apparition des données FCD, qui fournissent à faible coût une connaissance des vitesses pratiquées sur tous les segments du réseau, la compréhension de la relation débit vitesse trouve une utilité nouvelle. Elle permet de faire une estimation du débit à partir de la mesure de la vitesse.
+Il y a pourtant un intérêt à mieux comprendre l'écoulement congestionné
+.......................................................................
+On a pu considérer que les relations débit vitesse en régime très congestionné ne présentaient pas d'intérêt pratique. En effet, pour rendre compte d'un bouchon, les variables qu'il est utile de prendre en compte sont la capacité de la section aval qui est à l'origine de la congestion et le stock de véhicules à écouler. Cependant, avec l'apparition des données FCD, qui fournissent à faible coût une connaissance des vitesses pratiquées sur tous les segments du réseau, la compréhension de la relation débit vitesse trouve une utilité nouvelle. Elle permet de faire une estimation du débit à partir de la mesure de la vitesse. Dès lors on peut estimer le nombres d'usagers affectés par la congestion et donnée une mesure de se phénomène répartie sur le réseau.
 
+Le réseau d'Ile de France offre une opportunité pour étudier le phénomène
+..........................................................................
 En Ile de France, il est fréquent d'observer des vitesses inférieures à 20 km/h sur les autoroutes radiales vers Paris et sur les rocades A86, A104 et N104. Sur certaines sections très congestionnées, la situation habituelle à l'heure de pointe est caractérisée par une vitesse inférieure à 10 km/h.
 
 Par ailleurs, des investissements de gestion du trafic importants ont été réalisés depuis les années 1980. Le Système SIRIUS qui à compté jusqu'à 2600 points de mesures du trafic reste une source abondante de données sur les débits, les taux d'occupation et même les vitesses pour une partie des sites.
