@@ -25,11 +25,11 @@ Le réseau d'Ile de France offre une opportunité pour étudier le phénomène
 ..........................................................................
 En Ile de France, il est fréquent d'observer des vitesses inférieures à 20 km/h sur les autoroutes radiales vers Paris et sur les rocades A86, A104 et N104. Sur certaines sections très congestionnées, la situation habituelle à l'heure de pointe est caractérisée par une vitesse inférieure à 10 km/h.
 
-Par ailleurs, des investissements de gestion du trafic importants ont été réalisés depuis les années 1980. Le Système SIRIUS qui à compté jusqu'à 2600 points de mesures du trafic reste une source abondante de données sur les débits, les taux d'occupation et même les vitesses pour une partie des sites.
+Par ailleurs, des investissements de gestion du trafic importants ont été réalisés depuis les années 1980. Le Système SIRIUS qui à compté jusqu'à 2600 points de mesures du trafic reste  `une source abondante de données sur les débits, les taux d'occupation<debit&taux>` et même les vitesses pour une partie des sites.
 
 Le réseau routier structurant de l'Ile de France est donc un bon laboratoire pour étudier comment se comporte le trafic fortement congestionné.
 
-Ce document vise à présenter les données disponibles et des analyses qu'elles ont déjà permis de faire. Il comporte aussi des interrogations adressées aux lecteurs.
+Ce document vise à présenter les données disponibles et quelques analyses qu'elles ont déjà permis de faire. Il comporte aussi des interrogations adressées aux lecteurs plus savants que moi.
 
 
 
