@@ -10,10 +10,14 @@ La station doit être en *section courante*
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 La seconde condition que doit remplir une station pour êter retenue est de se trouver sur une *section courante* ce qui élimine les bretelles et les sections qui précèdent les divergences, avec des voies affectées, ou les sorties congestionnées qui occasionnent des remontés de file sur la voie de droite. En effet, quand les voies sont affectées à des destinations différentes, le régime peut être fluide sur une voie et congestionné sur l'autre. Quelques stations situées juste après une réduction du nombre de voies ont aussi été éliminées car on a constaté qu'elles connaissaient les effets de la transition et ne se comportent pas comme une section courante du point de vue de la relation débit/TO. 
 
-Les bretelles de liaisons et les entrées sorties sont identifiables par la nomenclature des sections du réseau SIRIUS et leur élimination peut donc se faire automatiquement. Plus du tiers des stations sélectionnées à l'étape précédente 
-(congestion récurrente) ont ainsi été éliminées.
+Identification des stations à exclure
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Plusieurs stations on été éliminées en les identifiant individuellement par leur position sur le réseau. C'est le cas des arrivées sur le périphérique où la congestion est souvent fonction de la destination. Dans certains cas, c'est en observant un diagramme débit/TO atypique que l'on est allé examiner la configuration de la station et que l'on a pu constater une situation particulière. Quand on n'a pas trouvé de justification sur le terrain, on a conservé les sites atypiques. Ils seront parfois éliminés, au moins pour certaines périodes de temps, à cause d'une anomalie détectée dans le recueil de données.
+Les bretelles de liaisons et les entrées sorties sont identifiables par la nomenclature des sections du réseau SIRIUS et leur élimination peut donc se faire automatiquement en s'appuyant sur le champ "NOM8EQUIP". Plus du tiers des stations sélectionnées à l'étape précédente (congestion récurrente) ont ainsi été éliminées.
+
+Dans la base de donnée, les stations situées en section courante sont identifiées par l'axe et le PR ce qui ne permet pas de détecter qu'elle se situe à un point singulier.
+Plusieurs stations (A3-W/00+0540, A13-W/00+0505,	A3-Y/01+0750,		A3-Y/02+0200,		A6B-Y/09+0380,
+	A86-E/12+0300,	A86-E/14+0560,	A86-I/00+0710,	A86-I/46+0185,N192-Y/00+0610,	) on été éliminées en les identifiant individuellement par leur position sur le réseau. C'est le cas des arrivées sur le périphérique où la congestion est souvent fonction de la destination. Dans certains cas, c'est en observant un diagramme débit/TO atypique qu'on est allé examiner la configuration de la station et que l'on a pu constater une situation particulière. Quand on n'a pas trouvé de justification sur le terrain, on a conservé les sites atypiques. Ils seront parfois éliminés, au moins pour certaines périodes de temps, à cause d'une anomalie détectée dans le recueil de données.
 
 
 
