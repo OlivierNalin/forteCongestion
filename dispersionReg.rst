@@ -18,10 +18,10 @@ Les valeurs des droites de regression pour TO = 45% ont des distributions dont l
      - Débit 6mn, écart type
    * - 2
      - 71.5
-     - 12.5
+     - 11.6
    * - 3
-     - 67.7
-     - 15.1
+     - 66.1
+     - 12.3
    * - 4
      - 73.0	
      - 14.9
@@ -31,7 +31,7 @@ Les valeurs des droites de regression pour TO = 45% ont des distributions dont l
 On peut représenter ces segments sur un même graphique (2 voies : rouge, 3 voies : vert, 4 voies : bleu).  
 
 .. image:: https://storage.googleapis.com/dirif-nalin/dispReg.png
-    :alt: my-picture1
+    :alt: regression
 
 Le tableau ci-dessous indique les moyennes et les écarts types des valeurs de la droite de régression pour le taux d’occupation 45%.
 
