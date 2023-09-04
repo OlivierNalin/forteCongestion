@@ -18,9 +18,10 @@ Les bretelles de liaisons et les entrées sorties sont identifiables par la nome
 Dans la base de donnée, les stations situées en section courante sont identifiées par l'axe et le PR ce qui ne permet pas de détecter qu'elle se situe à un point singulier.
 Plusieurs stations (A3-W/00+0540, A13-W/00+0505,A3-Y/01+0750, A3-Y/02+0200, A6B-Y/09+0380, A86-E/12+0300, A86-E/14+0560,A86-I/00+0710,A86-I/46+0185,N192-Y/00+0610) ont été éliminées en les identifiant individuellement par leur position sur le réseau. C'est le cas des arrivées sur le périphérique où la congestion est souvent fonction de la destination. Dans certains cas, c'est en observant un diagramme débit/TO atypique qu'on est allé examiner la configuration de la station et que l'on a pu constater une situation particulière. Quand on n'a pas trouvé de justification sur le terrain, on a conservé les sites atypiques. Ils seront parfois éliminés, au moins pour certaines périodes de temps, à cause d'une anomalie détectée dans le recueil de données.
 
-
-
-
+Résultat de la sélection
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+A l'issue des étapes de sélection décrites ci-dessus, il reste environ 120 stations de recueil dont les données semblent pertinentes.
+On peut visualiser les données correspondantes :doc:`ICI <debit&taux>`.
 
 
 
