@@ -4,9 +4,29 @@ Dispersion des segments de régression
 .. toctree::
    :hidden: 
 
+Les stations sélectionnées comportent toutes un volume significatif de valeurs du TO comprises entre 35 et 55%.
+On fait pour chaque station une régression linéaire sur la relation TO / débit sur l'intervale compris entre 35 et 55%.
 
-On constate, d'une station à l'autre, une certaine variation des segments de régression 
-calculés sur les données dont les taux sont compris entre 35 et 55%.
+Les valeurs des droites de regression pour TO = 45% ont des distributions dont les moyennes et écarts types sont les suivants:
+
+.. list-table:: Title
+   :widths: 25 25 50
+   :header-rows: 1
+
+   * - Nombre de voies
+     - Débit 6mn, moyenne
+     - Débit 6mn, écart type
+   * - 2
+     - 71.5
+     - 12.5
+   * - 3
+     - 67.7
+     - 15.1
+   * - 4
+     - 73.0	
+     - 14.9
+
+
 
 On peut représenter ces segments sur un même graphique (2 voies : rouge, 3 voies : vert, 4 voies : bleu).  
 
