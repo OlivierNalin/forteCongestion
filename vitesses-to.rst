@@ -22,9 +22,10 @@ Parmis les stations sélectionnées, les stations doubles sont les suivantes :
 
 La mesure directe de la vitesse est en principe plus précise que l'estimation faite à partir des taux d'occupation et du débit. Cependant, pour les faibles vitesses, on sait que la vitesse moyenne observée en un point, ce que mesurent les stations, est supérieure à la vitesse moyenne du trafic. On fera néanmoins la comparaison.
 
-Comme on l'a fait pour les débits, on calcule les segments de régression linéaires de la relation TO Vitesse et on retient la valeur de la régression pour TO = 45%.
+Comme on l'a fait pour les débits, on calcule les segments de régression linéaires de la relation TO Vitesse et on retient la valeur de la régression pour TO = 45%. La table suivante montre les valeurs des vitesses moyennes mesurée et des vitesse estimée à partir des débit et TO.
 
-.. csv-table:: Table Title
+
+.. csv-table:: Comparaison des vitesses mesurées et estimées
    :file: _static/vitMesEst.csv
    :widths: 40, 30 ,30
    :header-rows: 1
