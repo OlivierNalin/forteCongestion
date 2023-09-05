@@ -12,3 +12,22 @@ On a donc :
 
 .. math:: Vitesse = Débit/Concentration = 9.2 +/- 1.7 km/h
 
+Comparaison avec les vitesses mesurées par certaines stations
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Certaines stations de comptage sont équipées de doubles boucles et permettent de mesurer la vitesse des véhicules.
+Parmis les stations sélectionnées, les stations doubles sont les suivantes :
+'A1-W/01+0800', 'A1-W/04+0000', 'A1-W/10+0700', 'A1-Y/04+0000',  'A3-W/12+0100', 'A86-E/12+0300', 'A86-E/20+0450',
+'A86-E/22+0000',  'A86-E/30+0588', 'A86-E/38+0000', 'A86-E/39+0461', 'A86-I/05+0460',
+'A86-I/20+0450', 'A86-I/22+0100', 'A86-I/44+0110', 'A86-I/45+0875'.
+
+La mesure directe de la vitesse est en principe plus précise que l'estimation faite à partir des taux d'occupation et du débit. Cependant, pour les faibles vitesses, on sait que la vitesse moyenne observée en un point, ce que mesurent les stations, est supérieure à la vitesse moyenne du trafic. On fera néanmoins la comparaison.
+
+Comme on l'a fait pour les débits, on calcule les segments de régression linéaires de la relation TO Vitesse et on retient la valeur de la régression pour TO = 45%.
+
+.. csv-table:: Table Title
+   :file: _static/vitMesEst.csv
+   :widths: 40, 30 ,30
+   :header-rows: 1
+
+
+
