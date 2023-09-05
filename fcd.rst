@@ -8,4 +8,6 @@ Contrairement aux données des stations dont la disponibilité est mauvaises, le
 Les données de vitesse FCD sont archivées par la DIRIF avec une fréquence de 6mn. La longueur des segments est le plus souvent comprise entre 100 et 500 mètres et on peut considérer que la vitesse sur le segment est homogène à un instant donné.
 
 
+.. raw:: html
+   :file: ./_static/vitFcd16.html
 
