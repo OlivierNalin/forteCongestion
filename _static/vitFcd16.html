@@ -1,0 +1,42 @@
+
+<head><meta charset="utf-8" />
+  <link rel="icon" type="image/x-icon" href="https://storage.googleapis.com/idf-congestion/favicon.ico">  
+    <title>Vitesse FCD</title><body>
+</head>
+<h1 style="font-family:Arial;font-size: 20px;" > <label for="couleurs"> Choix de la station :</label>
+  <select id="couleur"  style="color:rgb(5, 139, 34);font-size: 20px;" size="1" onchange="afficher()">
+    <option value="https://storage.googleapis.com/dirif-nalin/choixStatV/A1-W-01+08.html">A1-W-01+08</option>
+    <option value="https://storage.googleapis.com/dirif-nalin/choixStatV/A1-W-04+00.html">A1-W-04+00</option>
+    <option value="https://storage.googleapis.com/dirif-nalin/choixStatV/A1-W-10+07.html">A1-W-10+07</option>
+    <option value="https://storage.googleapis.com/dirif-nalin/choixStatV/A1-Y-04+00.html">A1-Y-04+00</option>
+    <option value="https://storage.googleapis.com/dirif-nalin/choixStatV/A3-W-12+01.html">A3-W-12+01</option>
+    <option value="https://storage.googleapis.com/dirif-nalin/choixStatV/A86-E-12+03.html">A86-E-12+03</option>
+    <option value="https://storage.googleapis.com/dirif-nalin/choixStatV/A86-E-20+04.html">A86-E-20+04</option>
+    <option value="https://storage.googleapis.com/dirif-nalin/choixStatV/A86-E-22+00.html">A86-E-22+00</option>
+    <option value="https://storage.googleapis.com/dirif-nalin/choixStatV/A86-E-30+05.html">A86-E-30+05</option>
+    <option value="https://storage.googleapis.com/dirif-nalin/choixStatV/A86-E-38+00.html">A86-E-38+00</option>
+    <option value="https://storage.googleapis.com/dirif-nalin/choixStatV/A86-E-39+04.html">A86-E-39+04</option>
+    <option value="https://storage.googleapis.com/dirif-nalin/choixStatV/A86-I-05+04.html">A86-I-05+04</option>
+    <option value="https://storage.googleapis.com/dirif-nalin/choixStatV/A86-I-20+04.html">A86-I-20+04</option>
+    <option value="https://storage.googleapis.com/dirif-nalin/choixStatV/A86-I-22+01.html">A86-I-22+01</option>
+    <option value="https://storage.googleapis.com/dirif-nalin/choixStatV/A86-I-44+01.html">A86-I-44+01</option>
+    <option value="https://storage.googleapis.com/dirif-nalin/choixStatV/A86-I-45+08.html">A86-I-45+08</option>
+
+  </select>
+</h1>
+ <br>
+  <div id ="sortie"> '<object type="text/html" data="https://storage.googleapis.com/dirif-nalin/choixStatV/A1-W-01+08.html"  width="950px" height="600px"  ></object>'</div>
+  
+<script>
+
+  function afficher() {
+    let liste = document.getElementById("couleur");
+    let selection = liste.value;
+    
+    let sortie = document.getElementById("sortie");
+    var cdBl= '<object type="text/html" data=' + `${liste.value}`+' width="950px" height="600px"  ></object>'
+    sortie.innerHTML = cdBl;
+  
+  }
+
+</script>
