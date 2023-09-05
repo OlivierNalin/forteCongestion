@@ -7,8 +7,11 @@ Contrairement aux données des stations dont la disponibilité est mauvaises, le
 
 Les données de vitesse FCD sont archivées par la DIRIF avec une fréquence de 6mn. La longueur des segments est le plus souvent comprise entre 100 et 500 mètres et on peut considérer que la vitesse sur le segment est homogène à un instant donné.
 
+Comparaison avec les mesures de vitesse par les stations
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Pour les 16 stations doubles qui remontent une mesure directe de la vitesse, on représente les points dont l'abscisse est la valeur de la vitesse mesurée par la station et l'ordinnée, la valeur de la vitesse FCD.
 
 .. raw:: html
    :file: ./_static/vitFcd16.html
 
-zzz
+En général, comme on s'y attend les points sont situés proches de la diagonale. Les diagrammes qui font apparaitre des anomalies sont principalement des sections en tunnel où le signal permettant la localisation des FCD n'est pas toujours fiable.
