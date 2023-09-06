@@ -28,8 +28,9 @@ Les valeurs des droites de régression pour TO = 45% ont des distributions dont 
 
 On peut représenter ces segments sur un même graphique (2 voies : rouge, 3 voies : vert, 4 voies : bleu).  
 
-.. image:: https://storage.googleapis.com/dirif-nalin/dispReg.png
-    :alt: regression
+.. raw:: html
+   :file: ./_static/dispSeg.html
+
 
 
 
