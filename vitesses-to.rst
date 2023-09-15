@@ -33,5 +33,7 @@ La table suivante montre les valeurs moyennes des vitesses mesurées et des vite
 
 On constate, comme attendu, que la vitesse mesurée directement par la station est presque toujours supérieure à la vitesse calculée à partir du débit et de la concentation.
 
+On est surtout frappé par l'ampleur de la dispersion des valeurs prises par les vitesses pour une même concentation de véhicules.
+
 
 
