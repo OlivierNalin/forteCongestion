@@ -27,7 +27,6 @@ Comme on l'a fait pour les débits, on calcule les segments de régression liné
 
 .. csv-table:: Comparaison des vitesses mesurées et estimées
    :file: _static/vitMesEst.csv
-   :widths: 40, 30 ,30
    :header-rows: 1
 
 
