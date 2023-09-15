@@ -1,0 +1,452 @@
+<!doctype html>
+<html class="no-js" lang="en" data-content_root="./">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="Sélection des stations pertinentes" href="SelectionStations.html" /><link rel="prev" title="Régime de forte congestion" href="index.html" />
+
+    <link rel="shortcut icon" href="https://storage.googleapis.com/idf-congestion/favicon.ico"/><!-- Generated with Sphinx 7.2.6 and Furo 2023.09.10 -->
+        <title>Données de débit et de taux d’occupation - ForteCongestion documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?v=135e06be" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?v=36a5483c" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="index.html"><div class="brand">ForteCongestion  documentation</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="index.html">
+  
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo only-light" src="_static/fortC.svg" alt="Light Logo"/>
+    <img class="sidebar-logo only-dark" src="_static/fortC.svg" alt="Dark Logo"/>
+  </div>
+  
+  
+</a><form class="sidebar-search-container" method="get" action="search.html" role="search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <ul class="current">
+<li class="toctree-l1 current has-children current-page"><a class="current reference internal" href="#">Données de débit et de taux d’occupation</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of Données de débit et de taux d’occupation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="SelectionStations.html">Sélection des stations pertinentes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="qualite.html">Contrôle de la qualité des données disponibles</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="dispersionReg.html">Dispersion des segments de régression</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of Dispersion des segments de régression</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="vitesses-to.html">Estimation des vitesses à partir de la relation TO / Débit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fcd.html">Données de vitesse par Floating Car Data (FCD)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="debitFcd.html">Diagramme débit vitesse</a></li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          
+<div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <section id="donnees-de-debit-et-de-taux-d-occupation">
+<h1>Données de débit et de taux d’occupation<a class="headerlink" href="#donnees-de-debit-et-de-taux-d-occupation" title="Link to this heading">#</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<section id="stations-de-comptage">
+<h2>Stations de comptage<a class="headerlink" href="#stations-de-comptage" title="Link to this heading">#</a></h2>
+<p>La DiRIF a l’objectif de maintenir en état de fonctionnement 800 stations de comptage sur son réseau. L’obsolescence et les aléas de l’exploitation font qu’aujourd’hui seulement la moitié environ de ces stations sont opérationnelles. Néanmoins, des investissements en cours permetront d’améliorer leur disponibilité.</p>
+</section>
+<section id="donnees-produites">
+<h2>Données produites<a class="headerlink" href="#donnees-produites" title="Link to this heading">#</a></h2>
+<p>Les stations remontent des données de débit et de taux d’occupation (TO) sur des périodes de 6mn, soit 2 x 240 données par jour qui sont archivées durablement. Les 5 dernières années sont disponibles <em>en ligne</em>. Un historique de 15 ans est disponible en archivage.</p>
+<p>Les débits 6mn varient entre 0 et 250 par voie. Les taux d’occupation sont des valeurs entières de pourcentage
+qui ne dépassent jamais 60% quand la chaine de recueil fonctionne correctement.</p>
+</section>
+<section id="stations-congestionnes">
+<h2>Stations congestionnés<a class="headerlink" href="#stations-congestionnes" title="Link to this heading">#</a></h2>
+<p><a class="reference internal" href="SelectionStations.html"><span class="doc">Pour ce projet on a sélectionné des stations qui font apparaître de manière récurrente des régimes de fortes congestions, c’est-à-dire des taux d’occupation supérieurs à 40%.</span></a></p>
+<p>Pour chaque station, on a tracé le graphique représentant les couples (débit moyen par voie, TO) mesurés sur des périodes de 6mn.</p>
+<p>On fait apparaitre également le segment correspondant à la regression linéaire de ces données sur l’interval de TO 35% - 55%.
+Avec le pointeur sur le segment, on fait apparaitre les valeurs de la vitesse calculées par la formule :
+Vitesse = Débit / (2 x TO) .
+Le coeficient 2 permettant de passer dans cette formule du TO à la concentration n’est sans doute pas juste mais donne une ordre de grandeur.</p>
+<p>A ce stade, il ne s’agit que d’illustrer la richesse des données disponibles.</p>
+<p>Les stations sont identifiées par l’axe (A1,A13,N118 …), par le sens (W : radiale vers Paris,Y : radiale vers la province,E : rocade extérieure,I : rocade intérieure) et par le point de repère kilométrique (05+02 signifie : 200 mètres après le 5ème PR). Le lecteur est invité à visualiser les stations sélectionnées par la liste ci-dessous.</p>
+
+<head><meta charset="utf-8" />
+  <link rel="icon" type="image/x-icon" href="https://storage.googleapis.com/idf-congestion/favicon.ico">  
+    <title>Diagramme fondamental</title><body>
+</head>
+<h1 style="font-family:Arial;font-size: 20px;" > <label for="couleurs"> Choix de la station :</label>
+  <select id="couleur"  style="color:rgb(5, 139, 34);font-size: 20px;" size="1" onchange="afficher()">
+       <option value="https://storage.googleapis.com/dirif-nalin/choixStat/A1-W-00+07.html">A1-W-00+07</option>
+   <option value="https://storage.googleapis.com/dirif-nalin/choixStat/A1-W-01+03.html">A1-W-01+03</option>
+   <option value="https://storage.googleapis.com/dirif-nalin/choixStat/A1-W-01+08.html">A1-W-01+08</option>
+   <option value="https://storage.googleapis.com/dirif-nalin/choixStat/A1-W-02+04.html">A1-W-02+04</option>
+   <option value="https://storage.googleapis.com/dirif-nalin/choixStat/A1-W-03+02.html">A1-W-03+02</option>
+   <option value="https://storage.googleapis.com/dirif-nalin/choixStat/A1-W-08+03.html">A1-W-08+03</option>
+   <option value="https://storage.googleapis.com/dirif-nalin/choixStat/A1-W-10+07.html">A1-W-10+07</option>
+   <option value="https://storage.googleapis.com/dirif-nalin/choixStat/A1-Y-04+00.html">A1-Y-04+00</option>
+   <option value="https://storage.googleapis.com/dirif-nalin/choixStat/A10-W-02+05.html">A10-W-02+05</option>
+   <option value="https://storage.googleapis.com/dirif-nalin/choixStat/A10-W-08+04.html">A10-W-08+04</option>
+   <option value="https://storage.googleapis.com/dirif-nalin/choixStat/A104-I-09+03.html">A104-I-09+03</option>
+   <option value="https://storage.googleapis.com/dirif-nalin/choixStat/A104-I-11+04.html">A104-I-11+04</option>
+   <option value="https://storage.googleapis.com/dirif-nalin/choixStat/A106-W-06+00.html">A106-W-06+00</option>
+   <option value="https://storage.googleapis.com/dirif-nalin/choixStat/A12-W-02+01.html">A12-W-02+01</option>
+   <option value="https://storage.googleapis.com/dirif-nalin/choixStat/A13-W-10+05.html">A13-W-10+05</option>
+   <option value="https://storage.googleapis.com/dirif-nalin/choixStat/A13-W-10+08.html">A13-W-10+08</option>
+   <option value="https://storage.googleapis.com/dirif-nalin/choixStat/A13-W-11+05.html">A13-W-11+05</option>
+   <option value="https://storage.googleapis.com/dirif-nalin/choixStat/A13-Y-00+02.html">A13-Y-00+02</option>
+   <option value="https://storage.googleapis.com/dirif-nalin/choixStat/A13-Y-00+08.html">A13-Y-00+08</option>
+   <option value="https://storage.googleapis.com/dirif-nalin/choixStat/A14-W-01+00.html">A14-W-01+00</option>
+   <option value="https://storage.googleapis.com/dirif-nalin/choixStat/A3-W-02+02.html">A3-W-02+02</option>
+   <option value="https://storage.googleapis.com/dirif-nalin/choixStat/A3-W-09+02.html">A3-W-09+02</option>
+   <option value="https://storage.googleapis.com/dirif-nalin/choixStat/A3-W-09+09.html">A3-W-09+09</option>
+   <option value="https://storage.googleapis.com/dirif-nalin/choixStat/A3-W-11+02.html">A3-W-11+02</option>
+   <option value="https://storage.googleapis.com/dirif-nalin/choixStat/A3-W-11+10.html">A3-W-11+10</option>
+   <option value="https://storage.googleapis.com/dirif-nalin/choixStat/A3-W-12+01.html">A3-W-12+01</option>
+   <option value="https://storage.googleapis.com/dirif-nalin/choixStat/A3-Y-00+04.html">A3-Y-00+04</option>
+   <option value="https://storage.googleapis.com/dirif-nalin/choixStat/A4-W-10+00.html">A4-W-10+00</option>
+   <option value="https://storage.googleapis.com/dirif-nalin/choixStat/A4-W-12+01.html">A4-W-12+01</option>
+   <option value="https://storage.googleapis.com/dirif-nalin/choixStat/A6A-W-00+04.html">A6A-W-00+04</option>
+   <option value="https://storage.googleapis.com/dirif-nalin/choixStat/A6A-W-01+08.html">A6A-W-01+08</option>
+   <option value="https://storage.googleapis.com/dirif-nalin/choixStat/A6B-W-00+07.html">A6B-W-00+07</option>
+   <option value="https://storage.googleapis.com/dirif-nalin/choixStat/A6B-W-00+10.html">A6B-W-00+10</option>
+   <option value="https://storage.googleapis.com/dirif-nalin/choixStat/A6B-W-01+00.html">A6B-W-01+00</option>
+   <option value="https://storage.googleapis.com/dirif-nalin/choixStat/A6B-W-01+04.html">A6B-W-01+04</option>
+   <option value="https://storage.googleapis.com/dirif-nalin/choixStat/A6B-W-06+04.html">A6B-W-06+04</option>
+   <option value="https://storage.googleapis.com/dirif-nalin/choixStat/A6B-W-09+05.html">A6B-W-09+05</option>
+   <option value="https://storage.googleapis.com/dirif-nalin/choixStat/A6B-Y-00+05.html">A6B-Y-00+05</option>
+   <option value="https://storage.googleapis.com/dirif-nalin/choixStat/A6B-Y-07+02.html">A6B-Y-07+02</option>
+   <option value="https://storage.googleapis.com/dirif-nalin/choixStat/A6B-Y-07+08.html">A6B-Y-07+08</option>
+   <option value="https://storage.googleapis.com/dirif-nalin/choixStat/A86-E-04+04.html">A86-E-04+04</option>
+   <option value="https://storage.googleapis.com/dirif-nalin/choixStat/A86-E-06+00.html">A86-E-06+00</option>
+   <option value="https://storage.googleapis.com/dirif-nalin/choixStat/A86-E-11+06.html">A86-E-11+06</option>
+   <option value="https://storage.googleapis.com/dirif-nalin/choixStat/A86-E-12+03.html">A86-E-12+03</option>
+   <option value="https://storage.googleapis.com/dirif-nalin/choixStat/A86-E-12+08.html">A86-E-12+08</option>
+   <option value="https://storage.googleapis.com/dirif-nalin/choixStat/A86-E-13+05.html">A86-E-13+05</option>
+   <option value="https://storage.googleapis.com/dirif-nalin/choixStat/A86-E-14+05.html">A86-E-14+05</option>
+   <option value="https://storage.googleapis.com/dirif-nalin/choixStat/A86-E-18+04.html">A86-E-18+04</option>
+   <option value="https://storage.googleapis.com/dirif-nalin/choixStat/A86-E-20+04.html">A86-E-20+04</option>
+   <option value="https://storage.googleapis.com/dirif-nalin/choixStat/A86-E-22+00.html">A86-E-22+00</option>
+   <option value="https://storage.googleapis.com/dirif-nalin/choixStat/A86-E-29+02.html">A86-E-29+02</option>
+   <option value="https://storage.googleapis.com/dirif-nalin/choixStat/A86-E-29+09.html">A86-E-29+09</option>
+   <option value="https://storage.googleapis.com/dirif-nalin/choixStat/A86-E-30+02.html">A86-E-30+02</option>
+   <option value="https://storage.googleapis.com/dirif-nalin/choixStat/A86-E-30+05.html">A86-E-30+05</option>
+   <option value="https://storage.googleapis.com/dirif-nalin/choixStat/A86-E-31+00.html">A86-E-31+00</option>
+   <option value="https://storage.googleapis.com/dirif-nalin/choixStat/A86-E-37+06.html">A86-E-37+06</option>
+   <option value="https://storage.googleapis.com/dirif-nalin/choixStat/A86-E-38+00.html">A86-E-38+00</option>
+   <option value="https://storage.googleapis.com/dirif-nalin/choixStat/A86-E-39+04.html">A86-E-39+04</option>
+   <option value="https://storage.googleapis.com/dirif-nalin/choixStat/A86-E-43+01.html">A86-E-43+01</option>
+   <option value="https://storage.googleapis.com/dirif-nalin/choixStat/A86-E-45+00.html">A86-E-45+00</option>
+   <option value="https://storage.googleapis.com/dirif-nalin/choixStat/A86-E-47+04.html">A86-E-47+04</option>
+   <option value="https://storage.googleapis.com/dirif-nalin/choixStat/A86-E-48+06.html">A86-E-48+06</option>
+   <option value="https://storage.googleapis.com/dirif-nalin/choixStat/A86-E-50+08.html">A86-E-50+08</option>
+   <option value="https://storage.googleapis.com/dirif-nalin/choixStat/A86-E-52+02.html">A86-E-52+02</option>
+   <option value="https://storage.googleapis.com/dirif-nalin/choixStat/A86-E-52+07.html">A86-E-52+07</option>
+   <option value="https://storage.googleapis.com/dirif-nalin/choixStat/A86-E-52+12.html">A86-E-52+12</option>
+   <option value="https://storage.googleapis.com/dirif-nalin/choixStat/A86-E-52+16.html">A86-E-52+16</option>
+   <option value="https://storage.googleapis.com/dirif-nalin/choixStat/A86-E-60+02.html">A86-E-60+02</option>
+   <option value="https://storage.googleapis.com/dirif-nalin/choixStat/A86-E-60+07.html">A86-E-60+07</option>
+   <option value="https://storage.googleapis.com/dirif-nalin/choixStat/A86-E-61+02.html">A86-E-61+02</option>
+   <option value="https://storage.googleapis.com/dirif-nalin/choixStat/A86-I-00+07.html">A86-I-00+07</option>
+   <option value="https://storage.googleapis.com/dirif-nalin/choixStat/A86-I-01+07.html">A86-I-01+07</option>
+   <option value="https://storage.googleapis.com/dirif-nalin/choixStat/A86-I-02+02.html">A86-I-02+02</option>
+   <option value="https://storage.googleapis.com/dirif-nalin/choixStat/A86-I-02+06.html">A86-I-02+06</option>
+   <option value="https://storage.googleapis.com/dirif-nalin/choixStat/A86-I-03+02.html">A86-I-03+02</option>
+   <option value="https://storage.googleapis.com/dirif-nalin/choixStat/A86-I-04+04.html">A86-I-04+04</option>
+   <option value="https://storage.googleapis.com/dirif-nalin/choixStat/A86-I-04+07.html">A86-I-04+07</option>
+   <option value="https://storage.googleapis.com/dirif-nalin/choixStat/A86-I-05+04.html">A86-I-05+04</option>
+   <option value="https://storage.googleapis.com/dirif-nalin/choixStat/A86-I-06+00.html">A86-I-06+00</option>
+   <option value="https://storage.googleapis.com/dirif-nalin/choixStat/A86-I-06+04.html">A86-I-06+04</option>
+   <option value="https://storage.googleapis.com/dirif-nalin/choixStat/A86-I-20+00.html">A86-I-20+00</option>
+   <option value="https://storage.googleapis.com/dirif-nalin/choixStat/A86-I-20+04.html">A86-I-20+04</option>
+   <option value="https://storage.googleapis.com/dirif-nalin/choixStat/A86-I-20+09.html">A86-I-20+09</option>
+   <option value="https://storage.googleapis.com/dirif-nalin/choixStat/A86-I-21+05.html">A86-I-21+05</option>
+   <option value="https://storage.googleapis.com/dirif-nalin/choixStat/A86-I-22+06.html">A86-I-22+06</option>
+   <option value="https://storage.googleapis.com/dirif-nalin/choixStat/A86-I-43+06.html">A86-I-43+06</option>
+   <option value="https://storage.googleapis.com/dirif-nalin/choixStat/A86-I-45+00.html">A86-I-45+00</option>
+   <option value="https://storage.googleapis.com/dirif-nalin/choixStat/A86-I-45+04.html">A86-I-45+04</option>
+   <option value="https://storage.googleapis.com/dirif-nalin/choixStat/A86-I-45+08.html">A86-I-45+08</option>
+   <option value="https://storage.googleapis.com/dirif-nalin/choixStat/A86-I-46+01.html">A86-I-46+01</option>
+   <option value="https://storage.googleapis.com/dirif-nalin/choixStat/A86-I-46+06.html">A86-I-46+06</option>
+   <option value="https://storage.googleapis.com/dirif-nalin/choixStat/A86-I-46+09.html">A86-I-46+09</option>
+   <option value="https://storage.googleapis.com/dirif-nalin/choixStat/A86-I-50+01.html">A86-I-50+01</option>
+   <option value="https://storage.googleapis.com/dirif-nalin/choixStat/A86-I-50+06.html">A86-I-50+06</option>
+   <option value="https://storage.googleapis.com/dirif-nalin/choixStat/A86-I-50+08.html">A86-I-50+08</option>
+   <option value="https://storage.googleapis.com/dirif-nalin/choixStat/N104-E-10+04.html">N104-E-10+04</option>
+   <option value="https://storage.googleapis.com/dirif-nalin/choixStat/N104-E-10+09.html">N104-E-10+09</option>
+   <option value="https://storage.googleapis.com/dirif-nalin/choixStat/N104-E-11+03.html">N104-E-11+03</option>
+   <option value="https://storage.googleapis.com/dirif-nalin/choixStat/N104-E-37+00.html">N104-E-37+00</option>
+   <option value="https://storage.googleapis.com/dirif-nalin/choixStat/N104-E-38+03.html">N104-E-38+03</option>
+   <option value="https://storage.googleapis.com/dirif-nalin/choixStat/N104-E-44+04.html">N104-E-44+04</option>
+   <option value="https://storage.googleapis.com/dirif-nalin/choixStat/N104-I-00+03.html">N104-I-00+03</option>
+   <option value="https://storage.googleapis.com/dirif-nalin/choixStat/N104-I-28+06.html">N104-I-28+06</option>
+   <option value="https://storage.googleapis.com/dirif-nalin/choixStat/N104-I-40+06.html">N104-I-40+06</option>
+   <option value="https://storage.googleapis.com/dirif-nalin/choixStat/N118-W-02+06.html">N118-W-02+06</option>
+   <option value="https://storage.googleapis.com/dirif-nalin/choixStat/N118N-W-03+08.html">N118N-W-03+08</option>
+   <option value="https://storage.googleapis.com/dirif-nalin/choixStat/N118N-W-05+02.html">N118N-W-05+02</option>
+   <option value="https://storage.googleapis.com/dirif-nalin/choixStat/N118N-W-05+07.html">N118N-W-05+07</option>
+   <option value="https://storage.googleapis.com/dirif-nalin/choixStat/N184-E-04+08.html">N184-E-04+08</option>
+   <option value="https://storage.googleapis.com/dirif-nalin/choixStat/N186B-I-48+00.html">N186B-I-48+00</option>
+   <option value="https://storage.googleapis.com/dirif-nalin/choixStat/N19-Y-18+07.html">N19-Y-18+07</option>
+
+  </select>
+</h1>
+ <br>
+  <div id ="sortie"> '<object type="text/html" data="https://storage.googleapis.com/dirif-nalin/choixStat/A1-W-00+07.html"  width="950px" height="600px"  ></object>'</div>
+  
+<script>
+
+  function afficher() {
+    let liste = document.getElementById("couleur");
+    let selection = liste.value;
+    
+    let sortie = document.getElementById("sortie");
+    var cdBl= '<object type="text/html" data=' + `${liste.value}`+' width="950px" height="600px"  ></object>'
+    sortie.innerHTML = cdBl;
+  
+  }
+
+</script>
+</section>
+<section id="qualite-des-donnees">
+<h2>Qualité des données<a class="headerlink" href="#qualite-des-donnees" title="Link to this heading">#</a></h2>
+<p>Les données, quand elles sont présentes ne sont pas toujours fiables et il est indispensable de contrôler la qualité des données utilisées. Une perturbation fréquente est la perte intermitante de l’information sur l’une des voies. Elle n’est pas toujours facile à détecter. Cela signifie qu’il faut, pour certaines exploitations, faire un contrôle de chaque station et de chaque période utilisée.</p>
+<section id="plus-sur-la-qualite-des-donnees">
+<h3><a class="reference internal" href="qualite.html"><span class="doc">Plus sur la qualité des données</span></a><a class="headerlink" href="#plus-sur-la-qualite-des-donnees" title="Link to this heading">#</a></h3>
+</section>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="SelectionStations.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">Sélection des stations pertinentes</div>
+              </div>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="index.html">
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">Home</div>
+                
+              </div>
+            </a>
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            Made with 
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Données de débit et de taux d’occupation</a><ul>
+<li><a class="reference internal" href="#stations-de-comptage">Stations de comptage</a></li>
+<li><a class="reference internal" href="#donnees-produites">Données produites</a></li>
+<li><a class="reference internal" href="#stations-congestionnes">Stations congestionnés</a></li>
+<li><a class="reference internal" href="#qualite-des-donnees">Qualité des données</a><ul>
+<li><a class="reference internal" href="#plus-sur-la-qualite-des-donnees"><span class="xref std std-doc">Plus sur la qualité des données</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script src="_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/scripts/furo.js?v=32e29ea5"></script>
+    </body>
+</html>
