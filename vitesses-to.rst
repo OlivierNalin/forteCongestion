@@ -1,6 +1,6 @@
 Estimation des vitesses à partir de la relation TO / Débit
 ---------------------------------------------------------
-Nous faisons une estimation des vitesses du trafic congestionné en utilisant la relation : Vitesse = Débit/Concentration.
+Nous faisons ici une estimation des vitesses du trafic congestionné en utilisant la relation : Vitesse = Débit/Concentration.
 
 Le passage du taux d'occupation (TO) à la concentation nécessite une hypothèse sur la longueur moyenne des véhicules  (L). Celle-ci dépend des types de véhicules en circulation et en particulier du taux de PL. En Ile de France, à l'heure de pointe, les taux de PL sont généralement inférieurs à 10%. 
 
@@ -22,7 +22,7 @@ Parmis les stations sélectionnées, les stations doubles sont les suivantes :
 
 La mesure directe de la vitesse est en principe plus précise que l'estimation faite à partir des taux d'occupation et du débit. Cependant, pour les faibles vitesses, on sait que la vitesse moyenne observée en un point, ce que mesurent les stations, est supérieure à la vitesse moyenne du trafic. On fera néanmoins la comparaison.
 
-Comme on l'a fait pour les débits, on calcule les segments de régression linéaires de la relation TO Vitesse et on retient la valeur de la régression pour TO = 45%. La table suivante montre les valeurs des vitesses moyennes mesurée et des vitesse estimée à partir des débit et TO.
+Comme on l'a fait pour les débits, on calcule les segments de régression linéaires de la relation TO - Vitesse et on retient la valeur de la régression pour TO = 45%. La table suivante montre les valeurs des vitesses moyennes mesurée et des vitesse estimée à partir des débit et TO.
 
 
 .. csv-table:: Comparaison des vitesses mesurées et estimées
